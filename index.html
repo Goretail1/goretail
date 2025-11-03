@@ -11,9 +11,159 @@
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#000000" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { 
+      --brand: #000000;
+      --accent: #4b5563;
+      --sand: #f5f5dc;
+      --light: #ffffff;
+    }
+    html { scroll-behavior: smooth; }
+    .container { max-width: 1100px; }
+    .hero-img {
+      background-image: url('https://images.unsplash.com/photo-1574201635302-388dd92a4c3f');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
 </head>
-<body>
-  <h1>GO Retail Website</h1>
-  <p>Sube este archivo a GitHub Pages para publicar tu sitio.</p>
+<body class="bg-[var(--light)] text-gray-900 antialiased">
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-semibold">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--brand)] text-[var(--sand)]">GO</span>
+        <span class="tracking-wide text-[var(--brand)]">GO Retail</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#servicios" class="hover:text-[var(--accent)] text-gray-600">Servicios</a>
+        <a href="#categorias" class="hover:text-[var(--accent)] text-gray-600">Categorías</a>
+        <a href="#quienes" class="hover:text-[var(--accent)] text-gray-600">Quiénes Somos</a>
+      </nav>
+      <a href="#contacto" class="hidden md:inline-flex px-4 py-2 rounded-xl bg-[var(--brand)] text-[var(--sand)] text-sm hover:bg-[var(--accent)] transition">Contacto</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden bg-[var(--sand)]">
+    <div class="container mx-auto px-4 py-20 grid md:grid-cols-2 items-center gap-10">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-[var(--brand)]">Innovamos, Diseñamos, Entregamos</h1>
+        <p class="mt-5 text-gray-700 text-lg">Integramos diseño, desarrollo de producto y sourcing para marcas, empresas y retailers. Menos fricción, mejor servicio, mejores precios.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#servicios" class="px-5 py-3 rounded-xl bg-[var(--brand)] text-[var(--sand)] hover:bg-[var(--accent)] transition">Ver servicios</a>
+          <a href="#contacto" class="px-5 py-3 rounded-xl border border-[var(--brand)] text-[var(--brand)] hover:bg-gray-100 transition">Cotizar proyecto</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-[4/3] w-full rounded-2xl hero-img shadow-2xl"></div>
+      </div>
+    </div>
+  </section>
+
+    <!-- SERVICIOS -->
+  <section id="servicios" class="py-20 bg-[var(--light)]">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-[var(--brand)] border-l-4 border-[var(--accent)] pl-3">Qué hacemos</h2>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl border border-gray-300 bg-[var(--light)] shadow-sm hover:shadow-lg transition">
+          <h3 class="font-semibold text-[var(--brand)]">Diseño & Desarrollo</h3>
+          <p class="mt-2 text-sm text-gray-600">Investigación de tendencias, cartas de color, fichas técnicas, size specs y aprobaciones.</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-gray-300 bg-[var(--light)] shadow-sm hover:shadow-lg transition">
+          <h3 class="font-semibold text-[var(--brand)]">Sourcing & Producción</h3>
+          <p class="mt-2 text-sm text-gray-600">Selección de fábricas y calidades según necesidades, negociación y control de calidad.</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-gray-300 bg-[var(--light)] shadow-sm hover:shadow-lg transition">
+          <h3 class="font-semibold text-[var(--brand)]">Comercial & Go-to-Market</h3>
+          <p class="mt-2 text-sm text-gray-600">Planificación comercial, pricing y coordinación logística para lanzamientos eficientes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section id="categorias" class="py-20 bg-[var(--sand)]">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-[var(--brand)] border-l-4 border-[var(--accent)] pl-3">Categorías</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <article class="rounded-2xl overflow-hidden border border-gray-300 bg-[var(--light)] shadow-sm hover:shadow-lg transition">
+          <div class="aspect-video bg-cover bg-center" style="background-image: url('https://plus.unsplash.com/premium_photo-1664202526075-7436b5325ef3');"></div>
+          <div class="p-5">
+            <h3 class="font-semibold text-[var(--brand)]">Moda</h3>
+            <p class="mt-1 text-sm text-gray-600">Investigación de Tendencias, Desarrollo de Colecciones y Productos.</p>
+          </div>
+        </article>
+        <article class="rounded-2xl overflow-hidden border border-gray-300 bg-[var(--light)] shadow-sm hover:shadow-lg transition">
+          <div class="aspect-video bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1620799139507-2a76f79a2f4d');"></div>
+          <div class="p-5">
+            <h3 class="font-semibold text-[var(--brand)]">Deportes & Teamwear</h3>
+            <p class="mt-1 text-sm text-gray-600">Diseño y desarrollo de indumentaria deportiva para clubes y empresas.</p>
+          </div>
+        </article>
+        <article class="rounded-2xl overflow-hidden border border-gray-300 bg-[var(--light)] shadow-sm hover:shadow-lg transition">
+          <div class="aspect-video bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1559073760-0ee41703dbf7');"></div>
+          <div class="p-5">
+            <h3 class="font-semibold text-[var(--brand)]">Uniformes & Workwear</h3>
+            <p class="mt-1 text-sm text-gray-600">Uniformes técnicos y durables para empresas y distintos sectores industriales.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIENES SOMOS -->
+  <section id="quienes" class="py-20 bg-[var(--light)]">
+    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl font-bold text-[var(--brand)] border-l-4 border-[var(--accent)] pl-3">Quiénes Somos</h2>
+        <p class="mt-4 text-gray-600 text-lg leading-relaxed">
+          Con 15+ años de experiencia en retail somos un equipo especializado en diseño, sourcing y ejecución comercial para marcas, retailers y empresas. Nuestro enfoque combina creatividad, procesos claros, velocidad y know how para transformar ideas en productos reales y exitosos.
+        </p>
+        <hr class="my-6 border-gray-300">
+        <p class="mt-4 text-gray-600 text-lg leading-relaxed">
+          Contamos con una red de partners estratégicos en China, lo que nos permite ofrecer soluciones integrales a nuestros clientes.
+        </p>
+      </div>
+      <div class="relative">
+        <div class="aspect-[4/3] w-full rounded-2xl bg-cover bg-center shadow-2xl" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');"></div>
+      </div>
+    </div>
+  </section>
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-20 bg-[var(--sand)]">
+    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h2 class="text-3xl font-bold text-[var(--brand)] border-l-4 border-[var(--accent)] pl-3">Conversemos sobre tus Proyectos</h2>
+        <ul class="mt-6 space-y-2 text-sm text-gray-800">
+          <li>📍 Santiago, Chile · Shanghai, China</li>
+          <li>✉️ <a class="underline text-[var(--brand)] hover:text-[var(--accent)]" href="mailto:hola@goretail.com">matias@goretail1.com</a></li>
+          <li>🕒 Respuesta en menos de 48h hábiles</li>
+        </ul>
+      </div>
+      <form class="p-6 rounded-2xl border border-gray-300 bg-[var(--light)] shadow-sm" action="https://formspree.io/f/XXXXXXXX" method="POST">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm text-gray-700">Nombre</label>
+            <input name="nombre" required class="mt-1 w-full border border-gray-300 rounded-xl px-3 py-2" placeholder="Tu nombre" />
+          </div>
+          <div>
+            <label class="text-sm text-gray-700">Email</label>
+            <input name="email" type="email" required class="mt-1 w-full border border-gray-300 rounded-xl px-3 py-2" placeholder="tu@email.com" />
+          </div>
+        </div>
+        <div class="mt-4">
+          <label class="text-sm text-gray-700">Empresa</label>
+          <input name="empresa" class="mt-1 w-full border border-gray-300 rounded-xl px-3 py-2" placeholder="Nombre de la empresa" />
+        </div>
+        <div class="mt-4">
+          <label class="text-sm text-gray-700">Mensaje</label>
+          <textarea name="mensaje" rows="5" class="mt-1 w-full border border-gray-300 rounded-xl px-3 py-2" placeholder="Cuéntanos qué necesitas"></textarea>
+        </div>
+        <button type="submit" class="mt-4 w-full px-5 py-3 rounded-xl bg-[var(--brand)] text-[var(--sand)] hover:bg-[var(--accent)] transition">Enviar</button>
+      </form>
+    </div>
+  </section>
+  
 </body>
 </html>
